@@ -35,6 +35,3 @@ function SendMail{
   }
 
 }
-$mailBody = $contents
-Send-MailMessage -SmtpServer $SMTP_SERVER -Port $SMTP_PORT -From $MAIL_FROM -To $MAIL_TO -Subject $mailSubject -Body $mailBody -Encoding ([System.Text.Encoding]::UTF8)
-
