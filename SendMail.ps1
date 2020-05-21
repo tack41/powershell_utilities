@@ -1,8 +1,3 @@
-#メール送信
-$SMTP_SERVER=""     #送信SMTPサーバのホスト名 or IPアドレス
-$SMTP_PORT = ""     #送信SMTPサーバのポート番号
-$MAIL_FROM = ""     #メール送信元
-$MAIL_TO = ""       #メール送信先
 function SendMail{
   Param(
     [Parameter(Mandatory)]
