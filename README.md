@@ -1,0 +1,2 @@
+# powershell_utilities
+PowerShellでよく使う関数や定型文を管理します。
