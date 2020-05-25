@@ -22,11 +22,9 @@ function SendMail{
     [String] $attachmentFilePath = ""
   )
 
-  if([String]::IsNullOrEmpty($attachementFilePath)){
-    Send-MailMessage -SmtpServer $smtpServer -Port $smtpPortT -From $FromM -To $To -Subject $subject -Body $body -Encoding ([System.Text.Encoding]::UTF8)
+  if([String]::IsNullOrEmpty($attachmentFilePath)){
+    Send-MailMessage -SmtpServer $smtpServer -Port $smtpPort -From $From -To $To -Subject $subject -Body $body -Encoding ([System.Text.Encoding]::UTF8)
   }else{
-    Send-MailMessage -SmtpServer $smtpServer -Port $smtpPortT -From $FromM -To $To -Attachments $attachmentFilePath-Subject $subject -Body $body -Encoding ([System.Text.Encoding]::UTF8)
-
+    Send-MailMessage -SmtpServer $smtpServer -Port $smtpPort -From $From -To $To -Attachments $attachmentFilePath -Subject $subject -Body $body -Encoding ([System.Text.Encoding]::UTF8)
   }
-
 }
